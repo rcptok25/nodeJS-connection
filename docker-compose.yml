@@ -1,0 +1,10 @@
+services:
+  app:
+    image: "rcp/to-do-db:latest"
+    environment:
+      - WEB_SERVER_PORT=3004 
+      - LOG_LEVEL=development
+      - DB_CONNECTION_STRING=mongodb://host.docker.internal:27017/to_do_list
+    ports:
+      - "3000:3000" 
+      
